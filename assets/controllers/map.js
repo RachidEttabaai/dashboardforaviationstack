@@ -11,4 +11,8 @@ let positron = L.tileLayer('https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/
     attribution: cartodbAttribution
 }).addTo(map);
 
-map.setView([0, 0],2);
+map.fitWorld().zoomIn();
+
+map.on('resize', function(e) {
+    map.fitWorld({reset: true}).zoomIn();
+});
