@@ -1,8 +1,8 @@
-html, body {
-    height: 100%;
+body {
+    padding: 0;
     margin: 0;
 }
-#map {
-    width: 600px;
-    height: 400px;
+html, body, #map {
+    height: 100%;
+    width: 100%;
 }
