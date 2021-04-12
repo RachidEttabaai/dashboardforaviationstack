@@ -9,4 +9,4 @@ let cartodbAttribution = '&copy; <a href="https://www.openstreetmap.org/copyrigh
 
 let positron = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', ).addTo(map);
 
-map.setView([0, 0], 0);
+map.setView([0, 0], 1);
