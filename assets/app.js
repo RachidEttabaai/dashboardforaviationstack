@@ -9,7 +9,7 @@
 import "./styles/app.scss";
 import "./styles/map.scss";
 
-import "./controllers/map.js";
+import "./controllers/index.js";
 
 // start the Stimulus application
 // import './bootstrap';
