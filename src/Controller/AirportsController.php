@@ -7,14 +7,11 @@ use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
-/**
- * @Route("/airports")
- */
 class AirportsController extends AbstractController
 {
     /**
      * Get all airports datas from aviationstack API
-     * @Route("/all")
+     * @Route("/allairports",name="allairports")
      * @param ApiCallService $apiCallService
      * @return JsonResponse
      */
