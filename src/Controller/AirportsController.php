@@ -6,12 +6,14 @@ use App\Service\ApiCallService;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
-
+/**
+ * @Route("/api/airports")
+ */
 class AirportsController extends AbstractController
 {
     /**
      * Get all airports datas from aviationstack API
-     * @Route("/allairports",name="allairports", methods={"GET"})
+     * @Route("/all",name="allairports", methods={"GET"})
      * 
      * @param ApiCallService $apiCallService
      * @return JsonResponse
