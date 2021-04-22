@@ -12,6 +12,8 @@ class AirportsController extends AbstractController
     /**
      * Get all airports datas from aviationstack API
      * @Route("/allairports",name="allairports")
+     * @Method("GET")
+     * 
      * @param ApiCallService $apiCallService
      * @return JsonResponse
      */
