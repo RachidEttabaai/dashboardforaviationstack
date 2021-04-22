@@ -11,7 +11,12 @@ class ApiCallService
 
     private string $apiurl;
 
-    public function __construct(string $apiurl)
+    public function __construct()
+    {
+
+    }
+
+    public function setApiUrl(string $apiurl)
     {
         $this->apiurl = $apiurl;
     }
@@ -31,7 +36,7 @@ class ApiCallService
     }
     
     /**
-     * Show datas fril an API in an array
+     * Show datas from an API in an array
      *
      * @return array
      */
