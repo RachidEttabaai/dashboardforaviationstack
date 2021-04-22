@@ -5,6 +5,7 @@ namespace App\Controller;
 use App\Service\ApiCallService;
 use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\JsonResponse;
+use Sensio\Bundle\FrameworkExtraBundle\Configuration\Method;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class AirportsController extends AbstractController
