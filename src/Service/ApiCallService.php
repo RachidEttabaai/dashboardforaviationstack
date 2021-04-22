@@ -7,13 +7,13 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class ApiCallService
 {
-    private HttpClientInterface $httpclient;
+    private $httpclient;
 
     private string $apiurl;
 
-    public function __construct()
+    public function __construct(HttpClientInterface $httpclient)
     {
-
+        $this->httpclient = $httpclient;
     }
 
     public function setApiUrl(string $apiurl)
