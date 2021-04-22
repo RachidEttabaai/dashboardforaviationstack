@@ -20,7 +20,7 @@ class AirportsController extends AbstractController
         $apiCallService->setApiUrl("http://api.aviationstack.com/v1/airports?access_key=b930884297de709e3f1531ffda8e936a&limit=6471");
         
         $response = new JsonResponse($apiCallService->showDatasFromAPI());
-
+        dd($apiCallService->showDatasFromAPI());
         $response->setEncodingOptions($response->getEncodingOptions()|JSON_PRETTY_PRINT);
 
         return $response;
