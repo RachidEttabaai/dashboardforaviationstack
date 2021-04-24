@@ -1,3 +1,3 @@
 import {initMap} from "./map.js";
 
-initMap();
+let map = initMap();
