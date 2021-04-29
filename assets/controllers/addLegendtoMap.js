@@ -9,7 +9,7 @@ export function addLegend(map)
         let div = L.DomUtil.create("div","legend");
 
         div.innerHTML += "<h4>Aviation Stack</h4>";
-        div.innerHTML += '<a id="show-allairports" class="waves-effect waves-teal btn-flat">Show all airports</a>';
+        div.innerHTML += '<button id="show-allairports">Show all airports</button>';
 
         return div;
     };
