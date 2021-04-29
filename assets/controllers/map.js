@@ -1,7 +1,7 @@
 import "leaflet";
 
-export function initMap(){
-
+export function initMap()
+{
     let map = L.map("map", {
         minZoom: 1,
         maxZoom: 19,
