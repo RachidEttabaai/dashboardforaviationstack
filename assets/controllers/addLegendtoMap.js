@@ -6,7 +6,7 @@ export function addLegend(map)
 
     legend.onAdd = function(map)
     {
-        let div = L.DomUtil.create("div","center-align");
+        let div = L.DomUtil.create("div","legend center-align");
 
         div.innerHTML += "<h4>Aviation Stack</h4>";
         div.innerHTML += '<a id="show-allairports" class="waves-effect waves-teal btn-flat">Show all airports</a>';
