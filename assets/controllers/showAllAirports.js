@@ -7,6 +7,8 @@ export function showAllAirports(){
         $.ajax({
             type: "GET",
             url: "/api/airports/all",
+            dataType: "json",
+            async: true,
             error:function(err){
                 console.error(err)
             },
