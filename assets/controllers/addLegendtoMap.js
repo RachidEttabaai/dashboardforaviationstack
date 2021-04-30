@@ -2,7 +2,7 @@ import "leaflet";
 
 export function addLegend(map)
 {
-    let legend = L.control({position: "bottomleft"});
+    let legend = L.control({position: "bottomright"});
 
     legend.onAdd = function(map)
     {
