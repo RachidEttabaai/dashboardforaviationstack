@@ -12,9 +12,16 @@ export function showAllAirports(){
             error:function(err){
                 console.error(err)
             },
-            success:function(data) {
-    
-                console.log(data);
+            success:function(result) {
+
+                let airports = result.data;
+                let count = result.pagination.count;
+
+                console.log("Count of airports : "+ count);
+                
+                airports.forEach(airport => {
+                    console.log(airport);
+                });
 
             }
         });
