@@ -1,6 +1,7 @@
 let $ = require("jquery");
+import "leaflet";
 
-export function showAllAirports(){
+export function showAllAirports(map){
 
     document.querySelector("#show-allairports").addEventListener("click",function(){
 
@@ -20,7 +21,15 @@ export function showAllAirports(){
                 console.log("Count of airports : "+ count);
                 
                 airports.forEach(airport => {
-                    console.log(airport);
+                    let coord = [parseFloat(airport.latitude),parseFloat(airport.longitude)];
+                    let airportname = airport.airport_name;
+                    let country = airport.country_name;
+
+                    let contentpopup = '<img src="https://www.countryflags.io/'+airport.country_iso2+'/flat/32.png" title=""/><br>';
+                    contentpopup += "<h3>"+airportname+"</h3><br>";
+                    contentpopup += "<p>"+country+"</p>";
+                    
+                    L.marker(coord).addTo(map).bindPopup(contentpopup);
                 });
 
             }

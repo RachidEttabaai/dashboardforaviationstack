@@ -4,4 +4,4 @@ import {showAllAirports} from "./showAllAirports.js";
 
 let map = initMap();
 addLegend(map);
-showAllAirports();
+showAllAirports(map);
