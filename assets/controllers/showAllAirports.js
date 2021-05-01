@@ -27,7 +27,7 @@ export function showAllAirports(map){
                     let countryiso2 = airport.country_iso2;
 
                     let contentpopup = '<img src="https://flagcdn.com/h40/'+countryiso2.toLowerCase()+'.png" title="'+country+'"/><br>';
-                    contentpopup += "<h3>"+airportname+"</h3><br>";
+                    contentpopup += "<h3>"+airportname+" airport</h3><br>";
                     contentpopup += "<p>"+country+"</p>";
                     
                     L.marker(coord).addTo(map).bindPopup(contentpopup);
