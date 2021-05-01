@@ -3,6 +3,7 @@ import "leaflet";
 export function initMap()
 {
     let map = L.map("map", {
+        center: [0,0],
         minZoom: 1,
         maxZoom: 19,
     });
