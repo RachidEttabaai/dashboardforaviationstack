@@ -24,8 +24,9 @@ export function showAllAirports(map){
                     let coord = [parseFloat(airport.latitude),parseFloat(airport.longitude)];
                     let airportname = airport.airport_name;
                     let country = airport.country_name;
+                    let countryiso2 = airport.country_iso2;
 
-                    let contentpopup = '<img src="https://www.countryflags.io/'+airport.country_iso2+'/flat/32.png" title=""/><br>';
+                    let contentpopup = '<img src="https://www.countryflags.io/'+countryiso2.toLowerCase()+'/flat/32.png" title=""/><br>';
                     contentpopup += "<h3>"+airportname+"</h3><br>";
                     contentpopup += "<p>"+country+"</p>";
                     
