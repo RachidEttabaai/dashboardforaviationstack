@@ -18,7 +18,7 @@ export function showAllAirports(map){
                 let airports = result.data;
                 let count = result.pagination.count;
 
-                console.log("Count of airports : "+ count);
+                $("#count-airports").html("Count of airports : "+ count);
                 
                 airports.forEach(airport => {
                     let coord = [parseFloat(airport.latitude),parseFloat(airport.longitude)];
