@@ -4,4 +4,5 @@ import {showAllAirports} from "./showAllAirports.js";
 
 let map = initMap();
 addLegend(map);
+document.getElementById("hide-allairports").disabled = true;
 showAllAirports(map);

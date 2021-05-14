@@ -35,6 +35,8 @@ export function showAllAirports(map){
 
             }
         });
+
+        document.getElementById("hide-allairports").disabled = false;
     });
 
 }

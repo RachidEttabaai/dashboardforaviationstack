@@ -12,6 +12,7 @@ export function addLegend(map)
         div.innerHTML += "<hr/>";
         div.innerHTML += '<p><span id="count-airports"></span></p>';
         div.innerHTML += '<button id="show-allairports">Show all airports</button>';
+        div.innerHTML += '<button id="hide-allairports">Hide all airports</button>';
 
         return div;
     };
