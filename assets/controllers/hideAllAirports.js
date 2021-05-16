@@ -4,8 +4,18 @@ import "leaflet";
 export function hideAllAirports(map){
 
     document.querySelector("#hide-allairports").addEventListener("click",function(){
-       
-        console.log(map);
+        
+        let markers = [];
+
+        $.each(map._layers,function(ml){
+
+            if(map._layers[ml].features){
+                markers.push(this)
+            }
+
+        });
+
+        console.log(markers);
         
     });
 }
