@@ -21,7 +21,7 @@ export function showAllAirports(map){
 
                 $("#count-airports").html("Count of airports : "+ count);
                 
-                airports.forEach(airport => {
+                airports.forEach((airport,index) => {
                     let coord = [parseFloat(airport.latitude),parseFloat(airport.longitude)];
                     let airportname = airport.airport_name;
                     let country = airport.country_name;
@@ -33,7 +33,7 @@ export function showAllAirports(map){
 
                     let airportmarker = L.marker(coord);
                     airportmarkers.push(airportmarker);
-                    map.addLayer(coord);
+                    map.addLayer(airportmarkers[index]);
                     airportmarker.addTo(map).bindPopup(contentpopup);
                 });
 
