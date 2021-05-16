@@ -17,6 +17,7 @@ export function showAllAirports(map){
 
                 let airports = result.data;
                 let count = result.pagination.count;
+                let airportmarkers = [];
 
                 $("#count-airports").html("Count of airports : "+ count);
                 
@@ -29,8 +30,11 @@ export function showAllAirports(map){
                     let contentpopup = '<img src="https://flagcdn.com/h40/'+countryiso2.toLowerCase()+'.png" title="'+country+'"/><br>';
                     contentpopup += "<h3>"+airportname+" airport</h3><br>";
                     contentpopup += "<p>"+country+"</p>";
-                    
-                    L.marker(coord).addTo(map).bindPopup(contentpopup);
+
+                    let airportmarker = L.marker(coord);
+                    airportmarkers.push(airportmarker);
+                    map.addLayer(coord);
+                    airportmarker.addTo(map).bindPopup(contentpopup);
                 });
 
             }
