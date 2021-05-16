@@ -9,6 +9,8 @@ export function hideAllAirports(map){
 
         $.each(map._layers,function(ml){
 
+            console.log(map._layers[ml]);
+
             if(map._layers[ml].feature){
                 markers.push($(this));
             }
