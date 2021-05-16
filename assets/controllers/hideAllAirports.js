@@ -5,17 +5,7 @@ export function hideAllAirports(map){
 
     document.querySelector("#hide-allairports").addEventListener("click",function(){
         
-        let markers = [];
-
-        $.each(map._layers,function(ml){
-
-            if(map._layers[ml].features){
-                markers.push(this)
-            }
-
-        });
-
-        console.log(markers);
+        console.log(map._layers);
         
     });
 }
