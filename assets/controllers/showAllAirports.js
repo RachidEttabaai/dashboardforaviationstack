@@ -18,6 +18,8 @@ export function showAllAirports(map){
                 let airports = result.data;
                 let count = result.pagination.count;
 
+                $("#count-airports").html("Please wait,loading ...");
+
                 $("#count-airports").html("Count of airports : "+ count);
                 
                 airports.forEach(airport => {
