@@ -17,9 +17,9 @@ export function hideAllAirports(map){
 
         console.log(markers);
 
-        markers.forEach(marker => {
-            map.removeLayer(marker);
-        });
+        for (let index = 0; index < markers.length; index++) {
+            map.removeLayer(markers[index]);
+        }
         
     });
 }
