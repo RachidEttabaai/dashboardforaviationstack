@@ -10,7 +10,7 @@ export function hideAllAirports(map){
         $.each(map._layers,function(ml){
 
             if(map._layers[ml]._latlng){
-                markers.push(this);
+                markers.push(map._layers[ml]._latlng);
             }
 
         });
