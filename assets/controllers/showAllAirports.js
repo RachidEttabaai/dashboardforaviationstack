@@ -1,7 +1,10 @@
 let $ = require("jquery");
 import "leaflet";
+import { hideAllAirports } from "./hideAllAirports.js";
 
 export function showAllAirports(map){
+
+    let airportmarkers = [];
 
     document.querySelector("#show-allairports").addEventListener("click",function(){
 
@@ -17,7 +20,6 @@ export function showAllAirports(map){
 
                 let airports = result.data;
                 let count = result.pagination.count;
-                let airportmarkers = [];
 
                 $("#count-airports").html("Count of airports : "+ count);
                 
@@ -32,6 +34,8 @@ export function showAllAirports(map){
                     contentpopup += "<p>"+country+"</p>";
 
                     let airportmarker = L.marker(coord);
+                    airportmarkers.push(airportmarker);
+                    map.addLayer(airportmarkers[index]);
                     airportmarker.addTo(map).bindPopup(contentpopup);
                 });
 
@@ -39,6 +43,12 @@ export function showAllAirports(map){
         });
 
         document.getElementById("hide-allairports").disabled = false;
+
+        document.querySelector("#hide-allairports").addEventListener("click",function(){
+        
+          hideAllAirports(map,airportmarkers);
+            
+        });
     });
 
 }
