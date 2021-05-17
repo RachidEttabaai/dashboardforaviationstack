@@ -47,7 +47,7 @@ export function showAllAirports(map){
         document.querySelector("#hide-allairports").addEventListener("click",function(){
         
           hideAllAirports(map,airportmarkers);
-          $("#count-airports").html("Count of airports : 0");  
+          $("#count-airports").empty();  
         });
     });
 
