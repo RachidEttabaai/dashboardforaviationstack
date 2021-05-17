@@ -42,13 +42,17 @@ export function showAllAirports(map){
             }
         });
 
+        document.getElementById("show-allairports").disabled = true; 
         document.getElementById("hide-allairports").disabled = false;
 
         document.querySelector("#hide-allairports").addEventListener("click",function(){
         
           hideAllAirports(map,airportmarkers);
           $("#count-airports").empty();
-          document.getElementById("hide-allairports").disabled = true;  
+
+          document.getElementById("hide-allairports").disabled = true;
+          document.getElementById("show-allairports").disabled = true;
+             
         });
     });
 
