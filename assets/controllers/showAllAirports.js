@@ -32,8 +32,6 @@ export function showAllAirports(map){
                     contentpopup += "<p>"+country+"</p>";
 
                     let airportmarker = L.marker(coord);
-                    airportmarkers.push(airportmarker);
-                    map.addLayer(airportmarkers[index]);
                     airportmarker.addTo(map).bindPopup(contentpopup);
                 });
 
