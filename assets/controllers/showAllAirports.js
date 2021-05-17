@@ -51,8 +51,8 @@ export function showAllAirports(map){
           $("#count-airports").empty();
 
           document.getElementById("hide-allairports").disabled = true;
-          document.getElementById("show-allairports").disabled = true;
-             
+          document.getElementById("show-allairports").disabled = false;
+
         });
     });
 
