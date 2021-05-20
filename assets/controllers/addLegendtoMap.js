@@ -11,8 +11,8 @@ export function addLegend(map)
         div.innerHTML += "<h4>Aviation Stack</h4>";
         div.innerHTML += "<hr/>";
         div.innerHTML += '<p><span id="count-airports"></span></p>';
-        div.innerHTML += '<p><button id="show-allairports">Show all airports</button></p>';
-        div.innerHTML += '<p><button id="hide-allairports">Hide all airports</button></p>';
+        div.innerHTML += '<p><button id="show-allairports">Show all airports</button>';
+        div.innerHTML += '<button id="hide-allairports">Hide all airports</button></p>';
 
         return div;
     };
