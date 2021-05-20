@@ -6,8 +6,8 @@ export function showAllAirports(map){
 
     let airportmarkers = [];
 
-    document.querySelector("#show-allairports").addEventListener("click",function(){
-
+    document.querySelector("#show-allairports").addEventListener("click",function(event){
+        event.preventDefault();
         $.ajax({
             type: "GET",
             url: "/api/airports/all",
@@ -45,8 +45,8 @@ export function showAllAirports(map){
         document.getElementById("show-allairports").disabled = true; 
         document.getElementById("hide-allairports").disabled = false;
 
-        document.querySelector("#hide-allairports").addEventListener("click",function(){
-        
+        document.querySelector("#hide-allairports").addEventListener("click",function(event){
+          event.preventDefault();
           hideAllAirports(map,airportmarkers);
           $("#count-airports").empty();
 
